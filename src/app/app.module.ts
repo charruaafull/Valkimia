@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {SidebarComponent} from './sidebar/sidebar.component';
 import {PostsComponent} from './posts/posts.component';
 import {UsersComponent} from './users/users.component';
 import {CreateComponent} from './create/create.component';
@@ -21,7 +20,6 @@ import {ToastrModule} from "ng6-toastr-notifications";
 @NgModule({
     declarations: [
         AppComponent,
-        SidebarComponent,
         PostsComponent,
         UsersComponent,
         LoginComponent,
