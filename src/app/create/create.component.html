@@ -1,0 +1,70 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="card">
+        <div class="card-header">
+            {{titleCard}}
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label>Id</label>
+                    <input type="text" formControlName="documento" [(ngModel)]="usuario.documento" class="form-control"
+                           [ngClass]="{ 'is-invalid': f.documento.touched && f.documento.errors }"/>
+                    <div *ngIf="f.documento.touched && f.documento.errors" class="invalid-feedback">
+                        <div *ngIf="f.documento.errors.required">Complete este campo</div>
+                        <div *ngIf="f.documento.errors.min">Minimo 5</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Apellido</label>
+                    <input type="text" formControlName="apellido" [(ngModel)]="usuario.apellido" class="form-control"
+                           [ngClass]="{ 'is-invalid': f.apellido.touched && f.apellido.errors }"/>
+                    <div *ngIf="f.apellido.touched && f.apellido.errors" class="invalid-feedback">
+                        <div *ngIf="f.apellido.errors.required">Complete este campo</div>
+                        <div *ngIf="f.apellido.errors.minLength">Minimo 3 caracteres</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" formControlName="nombre" [(ngModel)]="usuario.nombre" class="form-control"
+                           [ngClass]="{ 'is-invalid': f.nombre.touched && f.nombre.errors }"/>
+                    <div *ngIf="f.nombre.touched && f.nombre.errors" class="invalid-feedback">
+                        <div *ngIf="f.nombre.errors.required">Complete este campo</div>
+                        <div *ngIf="f.nombre.errors.minLength">Minimo 3 caracteres</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" formControlName="direccion" [(ngModel)]="usuario.direccion" class="form-control"
+                           [ngClass]="{ 'is-invalid': f.direccion.touched && f.direccion.errors }"/>
+                    <div *ngIf="f.direccion.touched && f.direccion.errors" class="invalid-feedback">
+                        <div *ngIf="f.direccion.errors.required">Complete este campo</div>
+                        <div *ngIf="f.direccion.errors.minLength">Minimo 3 caracteres</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" formControlName="telefono" [(ngModel)]="usuario.telefono" class="form-control"
+                           [ngClass]="{ 'is-invalid': f.telefono.touched && f.telefono.errors }"/>
+                    <div *ngIf="f.telefono.touched && f.telefono.errors" class="invalid-feedback">
+                        <div *ngIf="f.telefono.errors.required">Complete este campo</div>
+                        <div *ngIf="f.telefono.errors.minLength">Minimo 3 caracteres</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <input type="text" formControlName="estado" [(ngModel)]="usuario.estado" class="form-control"
+                           [ngClass]="{ 'is-invalid': f.estado.touched && f.estado.errors }"/>
+                    <div *ngIf="f.estado.touched && f.estado.errors" class="invalid-feedback">
+                        <div *ngIf="f.estado.errors.required">Complete este campo</div>
+                        <div *ngIf="f.estado.errors.minLength">Minimo 3 caracteres</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <input class="btn btn-success btn-block" type="submit" value="Agregar">
+        </div>
+    </div>
+</form>
+
+

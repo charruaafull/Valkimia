@@ -1,0 +1,21 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent"><br>
+        <form #frmLogin="ngForm" (ngSubmit)="onSubmit()">
+            <div *ngIf="this.alert" class="alert alert-warning">
+                {{alert}}
+            </div>
+            <div class="form-group">
+                <label>Usuario</label>
+                <input type="text" #usuario="ngModel" [(ngModel)]="login.usuario" class="form-control" id="usuario"
+                       name="usuario">
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="text" #password="ngModel" [(ngModel)]="login.password" class="form-control"
+                       id="password"
+                       name="password">
+            </div>
+            <input type="submit" class="fadeIn fourth" value="Ingresar">
+        </form>
+    </div>
+</div>
